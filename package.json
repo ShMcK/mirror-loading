@@ -23,5 +23,7 @@
     "src",
     "package.json"
   ],
-  "scripts": {}
+  "peerDependencies": {
+    "mirrorx": "^0.2.5"
+  }
 }
