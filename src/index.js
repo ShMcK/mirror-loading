@@ -10,17 +10,16 @@ export default (mirror, options = {}) => {
   console.log('actions', mirror.actions)
   console.log('mirror', mirror)
 
-  // map over effects and add loading indicators
+  // map over effects and add dispatch of show & hide
   // TODO
 
   const createLoadingAction = (show) => (state, { namespace, actionType }) => {
-    const next = {
-      ...state,
+    const next = Object.assign({}, state, {
       global: show,
-      models: { ...state.models, [namespace]: show },
-    }
+      models: Object.assign({}, state.models, { [namespace]: show }),
+    })
     if (options.effects) {
-      next.effects = { ...state.effects, [actionType]: show }
+      next.effects = Object.assign({}, state.effects, { [actionType]: show })
     }
     return next
   }
@@ -46,7 +45,7 @@ export default (mirror, options = {}) => {
     const modelActions = mirror.actions[modelName]
     // map over models
     Object.keys(modelActions).map(actionName => {
-      console.log(modelActions[actionName])
+      console.log('modelActions', modelActions[actionName])
     })
   })
 

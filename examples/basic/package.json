@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "hoist-non-react-statics": "^2.3.1",
-    "mirrorx": "^0.2.5",
+    "mirrorx": "^0.2.6",
     "mirror-loading": "file:../..",
     "prop-types": "15.5.10",
     "react": "15.0.0",
