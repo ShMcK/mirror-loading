@@ -8,6 +8,6 @@ import App from './App'
 mirror.model(appModel)
 
 // after models
-mirrorLoading(mirror)
+mirrorLoading(mirror, { effects: true })
 
 render(<App />, document.getElementById('root'))
