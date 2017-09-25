@@ -2,6 +2,9 @@
 
 Adds automated loading indicators for effects to [Mirror.js](https://github.com/mirrorjs/mirror). Inspired by [dva-loading](https://github.com/dvajs/dva-loading).
 
+> WARNING
+> As of yet not published. Requires a small change to mirror.js in order to work. See https://github.com/mirrorjs/mirror/pull/62.
+
 ## Example
 
 See an example use case below using a loading indicator within a button.
