@@ -15,9 +15,9 @@ import { actions, connect } from 'mirrorx'
 import AwesomeLoadingButton from './components/KindaCoolLoadingButton'
 
 const LoginButton = (props) => (
-  <LoadingButton onClick={props.submit} loading={props.loading}>
+  <AwesomeLoadingButton onClick={props.submit} loading={props.loading}>
     Login
-  </LoadingButton>
+  </AwesomeLoadingButton>
 )
 
 const mapState = state => ({
@@ -38,6 +38,9 @@ See a [demo](./examples/basic)
 
 Install `mirror-loading` as a dependency.
 
+> NOTE
+> not yet unpublished
+
 ```shell
 npm install mirror-loading
 ```
@@ -55,22 +58,28 @@ mirrorLoading(mirror)
 
 ### effects.
 
-Loading defaults to use only "global" and "model" loading indicators. If you would like indicators for all effects, use the `effects` option.
+Loading defaults to use only "global" and "model" loading indicators.
+
+If you would also like indicators for all effects, set the `effects` option to true.
 
 ```js
 mirrorLoading(mirror, { effects: true })
 ```
 
-These can be accessed from the effects.
+Loading effects can be accessed as `state.loading.effects.modelName.effectName`.
+
+As an example: 
 
 ```js
-state.loading.effects.modelName.effectName
+state.loading.effects.login.submit
 ```
 
 ### reducer namespace
 
-The loading reducer defaults to the name "loading". If you would like to change this, use the `name` option.
+The loading reducer defaults to the name "loading".
+
+If you would like to change this, use the `name` option.
 
 ```js
-mirrorLoading(mirror, { name: 'indicators' })
+mirrorLoading(mirror, { name: 'load' })
 ```
