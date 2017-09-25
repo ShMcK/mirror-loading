@@ -6,6 +6,8 @@
     "redux",
     "loading",
     "mirror",
+    "mirrorx",
+    "mirrorjs",
     "mirror.js"
   ],
   "repository": {
