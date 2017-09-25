@@ -26,6 +26,6 @@
     "package.json"
   ],
   "peerDependencies": {
-    "mirrorx": "git://github.com/shmck/mirror#publish/head"
+    "mirrorx": "^0.2.8"
   }
 }

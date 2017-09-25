@@ -1,3 +1,13 @@
 # Basic Demo
 
-Install deps and run `npm start`.
+Install dependencies.
+
+```
+npm install
+```
+
+Run
+
+```
+npm start
+```

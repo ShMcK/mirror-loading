@@ -2,12 +2,9 @@
 
 Adds automated loading indicators for effects to [Mirror.js](https://github.com/mirrorjs/mirror). Inspired by [dva-loading](https://github.com/dvajs/dva-loading).
 
-> WARNING
-> As of yet not published. Requires a small change to mirror.js in order to work. See https://github.com/mirrorjs/mirror/pull/62.
-
 ## Example
 
-See an example use case below using a loading indicator within a button.
+See an example below using a loading indicator within a button.
 
 ```js
 import React from 'react'
@@ -38,25 +35,25 @@ See a [demo](./examples/basic)
 
 Install `mirror-loading` as a dependency.
 
-> NOTE
-> not yet unpublished
-
 ```shell
 npm install mirror-loading
 ```
 
-Initiate mirror loading.
+Configure mirror loading.
 
 ```js
 import mirror from 'mirrorx'
 import mirrorLoading from 'mirror-loading'
 
-mirrorLoading(mirror)
+// see options API below
+const options = {}
+
+mirrorLoading(mirror, options)
 ```
 
 ## Options
 
-### effects.
+### effects
 
 Loading defaults to use only "global" and "model" loading indicators.
 
@@ -74,12 +71,14 @@ As an example:
 state.loading.effects.login.submit
 ```
 
-### reducer namespace
+### name
 
-The loading reducer defaults to the name "loading".
+The loading reducer defaults to the name of "loading".
 
 If you would like to change this, use the `name` option.
 
 ```js
 mirrorLoading(mirror, { name: 'load' })
 ```
+
+In which case, loading can be accessed from `state.load.global`.

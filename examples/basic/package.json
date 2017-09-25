@@ -7,7 +7,7 @@
     "build": "cross-env NODE_ENV=production webpack -p"
   },
   "dependencies": {
-    "mirrorx": "git+https://github.com/shmck/mirror.git#publish",
+    "mirrorx": "^0.2.8",
     "mirror-loading": "file:../..",
     "react": "15.6.1",
     "react-dom": "15.6.1"
